@@ -11,17 +11,26 @@ public class ShoppingCart extends Ecommerce {
 	String itemAvalibility = "NotAvalable";
 	int primaryKey = 1;
 	Scanner userInput = new Scanner(System.in);
-	/*In this function allActivity perform basic activity like show all function name and add quantity product name  
-	 * and add to cart
-	 * @param functionName it contain all the name of function which we are perform
-	 * @param userInputChoice it take the choice of operation user want to perform
-	 * @param addCartResult it take return result of add cart function
-	 * @param continueInsertInput this variable indicate user want to insert more product or not
+
+	/*
+	 * In this function allActivity perform basic activity like show all
+	 * function name and add quantity product name and add to cart
 	 * 
-	 * */
+	 * @param functionName it contain all the name of function which we are
+	 * perform
+	 * 
+	 * @param userInputChoice it take the choice of operation user want to
+	 * perform
+	 * 
+	 * @param addCartResult it take return result of add cart function
+	 * 
+	 * @param continueInsertInput this variable indicate user want to insert
+	 * more product or not
+	 */
 	public void allActivity() {
 		String productName[] = new String[] { "Apple", "Mi", "Samsung", "Nokia" };
-		String functionName[] = new String[] { "addProductToCart", "ShowProduct" };
+		String functionName[] = new String[] { "addProductToCart",
+				"ShowProduct" };
 		String userInputChoice;
 		try {
 			System.out.println("Enter  the Quntity");
@@ -72,12 +81,14 @@ public class ShoppingCart extends Ecommerce {
 	}
 
 	@Override
-	/*In this function showProduct perform basic activity like show all Product name and add Price description of product   
-	 * and add to cart
-	 * @param productPrice it contain all the Price of Product 
-	 * @paramproductPrice it contain all the Description of Product 
+	/*
+	 * In this function showProduct perform basic activity like show all Product
+	 * name and add Price description of product and add to cart
 	 * 
-	 * */
+	 * @param productPrice it contain all the Price of Product
+	 * 
+	 * @paramproductPrice it contain all the Description of Product
+	 */
 	public void showProduct() {
 		String productName[] = new String[] { "Apple", "Mi", "Samsung", "Nokia" };
 		System.out.println("Welcome To Ecommerce");
@@ -159,15 +170,19 @@ public class ShoppingCart extends Ecommerce {
 	}
 
 	@Override
-	/*In this function updateProductToCart perform basic activity like Update all Product quantity and  total amout   of product   
-	 * and add to cart
-	 * @param productId it contain all the productId of Product  which want to update
-	 * Quantity quantity it contain all the quantity of Product which want to update 
+	/*
+	 * In this function updateProductToCart perform basic activity like Update
+	 * all Product quantity and total amout of product and add to cart
 	 * 
-	 * */
+	 * @param productId it contain all the productId of Product which want to
+	 * update Quantity quantity it contain all the quantity of Product which
+	 * want to update
+	 */
 	public int updateProductToCart(int productId, int quntity) {
 		if (quntity == 0) {
 			cartContainProductQunity.remove(productId);
+			cartContainProductName.remove(productId);
+
 		} else {
 			cartContainProductQunity.put(productId, quntity);
 		}
@@ -176,12 +191,14 @@ public class ShoppingCart extends Ecommerce {
 	}
 
 	@Override
-	/*In this function genrateBillOfCart perform basic activity like generate Bill Of Cart all with Product quantity and  total amout   of product  
-	 * and add product price total cart amount and productId
-	 * @param cartContainProductName2 it contain all the productName  of Product
-	 * Quantity cartContainProductPrice it contain all the Price of Product
+	/*
+	 * In this function genrateBillOfCart perform basic activity like generate
+	 * Bill Of Cart all with Product quantity and total amout of product and add
+	 * product price total cart amount and productId
 	 * 
-	 * */
+	 * @param cartContainProductName2 it contain all the productName of Product
+	 * Quantity cartContainProductPrice it contain all the Price of Product
+	 */
 	public void genrateBillOfCart(
 			HashMap<Integer, String> cartContainProductName,
 			HashMap<Integer, Integer> cartContainProductPrice) {
@@ -192,22 +209,27 @@ public class ShoppingCart extends Ecommerce {
 		System.out.println("Your Total Amount  Is");
 		System.out
 				.println("Product Id | Product Name | Product Quntity | Product Price | Total Amount");
-		for (Map.Entry m : cartContainProductName.entrySet()) {
-			String productName = (String) m.getValue();
-			// System.out.print(productName);
-			int prouctId = (int) m.getKey();
-			int productQunity = cartContainProductQunity.get(prouctId);
-			int getProductPrice = productPrice.get(productName.toUpperCase());
-			TotalAmount = TotalAmount + getProductPrice * productQunity;
-			System.out
-					.println("--------------------------------------------------------------------------");
-			System.out.println(prouctId + "          |   " + productName
-					+ "      |   " + productQunity + "              |   "
-					+ getProductPrice + "         |   " + getProductPrice
-					* productQunity);
-			System.out
-					.println("--------------------------------------------------------------------------");
+		if (cartContainProductQunity.size() > 0) {
+			for (Map.Entry m : cartContainProductName.entrySet()) {
+				String productName = (String) m.getValue();
+				// System.out.print(productName);
+				int prouctId = (int) m.getKey();
+				int productQunity = cartContainProductQunity.get(prouctId);
+				int getProductPrice = productPrice.get(productName
+						.toUpperCase());
+				TotalAmount = TotalAmount + getProductPrice * productQunity;
+				System.out
+						.println("--------------------------------------------------------------------------");
+				System.out.println(prouctId + "          |   " + productName
+						+ "      |   " + productQunity + "              |   "
+						+ getProductPrice + "         |   " + getProductPrice
+						* productQunity);
+				System.out
+						.println("--------------------------------------------------------------------------");
 
+			}
+		} else {
+			System.out.println("Your Cart Is empty");
 		}
 		System.out.println("TotalAmount =>" + TotalAmount);
 		System.out.println("1->Update Cart");
@@ -233,12 +255,12 @@ public class ShoppingCart extends Ecommerce {
 			if (updateResult == 1) {
 				genrateBillOfCart(cartContainProductName,
 						cartContainProductQunity);
-				
+
 			}
 			break;
 		case 2:
 			System.out.println("Your Order Is Placed");
-			System.out.print("Total Amoutnt is->"+TotalAmount);
+			System.out.print("Total Amoutnt is->" + TotalAmount);
 			break;
 		default:
 			System.out.println("Please Insert Valid");
