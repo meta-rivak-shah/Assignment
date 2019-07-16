@@ -7,13 +7,11 @@ public class MarkSheet {
 	 */
 	public  float average( float grades[] ){
 		float average = 0,sum = 0;
-
 		for(int i=0 ; i < grades.length ; i++ ){
 			sum = sum + grades[i];
 		}
 		try{
 			average=sum/(grades.length);
-		
 		}catch(ArithmeticException e){
 			  System.out.println ("You Shouldn't divide a number by zero");
 		}
