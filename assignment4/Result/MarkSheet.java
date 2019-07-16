@@ -1,6 +1,4 @@
 package grades;
-
-
 public class MarkSheet {
 	/**
 	 * @param num
@@ -64,8 +62,6 @@ public class MarkSheet {
 		}catch(ArithmeticException e){
 			System.out.println("You shouldn't divide number by zero");
 		}
-		
 		return  percentageStudentPass;
 	}
-
 }
