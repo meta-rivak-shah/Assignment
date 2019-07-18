@@ -1,5 +1,4 @@
 package gate2019.assignment4;
-
 /**
  * @class ArrayOperation this class contain all operation like
  * @func maxMirror
@@ -8,10 +7,8 @@ package gate2019.assignment4;
  * @func countClumps
  * @func splitArray this class do all this basic operation
  * @author Rivak shah
- *
  */
 public class ArrayOperation {
-
 	/**
 	 * this function is used to find the mirror element in array
 	 * 
@@ -24,7 +21,6 @@ public class ArrayOperation {
 		int startIndex;
 		int linearSearchResult;
 		int sectionCheck[] = new int[inputArray.length];
-
 		/**
 		 * try catch block is used to handle the error that if Array is empty
 		 * theb it return an assertion Error
@@ -38,16 +34,10 @@ public class ArrayOperation {
 		}
 		/*
 		 * @param inputArray contain the Array Element in this
-		 * 
 		 * @param counter is used to increase or decreases the value one by one
-		 * 
-		 * @param startIndex this contain the start index of left side value
-		 * 
-		 * @param arrayElement this is used to contain the index wise element in
-		 * array
-		 * 
+		 * @param startIndex this contain the start index of left side valu
+		 * @param arrayElement this is used to contain the index wise element inarray
 		 * @func linearSearch this function is used to search the value in array
-		 * 
 		 * @param result this contain the result of function
 		 */
 		for (int i = inputArray.length - 1; i >= 0; i--) {
@@ -98,34 +88,24 @@ public class ArrayOperation {
 				max = sectionCheck[i];
 			}
 		}
-
 		return max;
 	}
-
 	/*
 	 * this function is used to find the element in array
-	 * 
 	 * @param value contain the the value which want to search
-	 * 
 	 * @param first is start index of array
-	 * 
 	 * @param, last is the last index of array
-	 * 
 	 * @pram inputArray is contain the element
 	 */
 	private int linearSearch(int value, int first, int last, int[] inputArray) {
 		for (int i = last; i > first; i--) {
-
 			if (inputArray[i] == value) {
-
 				return i;
 			}
 		}
 		return -1;
 	}
-
 	/**
-	 * 
 	 * @param inputArray  contain the element in the array
 	 * @return the -1 or no of clumps if two adjacent are match
 	 * @param index  is used to store the same element is there or not
@@ -149,7 +129,6 @@ public class ArrayOperation {
 		}
 		return count;
 	}
-
 	/**
 	 * @param sumOfArray  complete sum of array
 	 * @param rideSideSum is the sum of ride side
@@ -161,11 +140,9 @@ public class ArrayOperation {
 		int righSideSum = 0;
 		int totalAdjacent = 0;
 		for (int i = 0; i < inputArray.length; i++) {
-
 			sumOfArray = sumOfArray + inputArray[i];
 		}
 		if (sumOfArray % 2 == 1) {
-
 			return -1;
 		} else {
 			int halfSum = (sumOfArray / 2);
@@ -183,9 +160,7 @@ public class ArrayOperation {
 			}
 		}
 	}
-
 	/**
-	 * 
 	 * @param inputArray   contain the element of array
 	 * @param x element which should not move
 	 * @param y  element which next to x element
@@ -197,16 +172,13 @@ public class ArrayOperation {
 		int k;
 		int countX = 0;
 		int countY = 0;
-
 		try {
-
 			if (inputArray.length == 0) {
 				throw new AssertionError("Assertion Error occured");
 			}
 		} catch (AssertionError e) {
 			System.out.println(e.getMessage());
 		}
-
 		for (int l = 0; l < inputArray.length; l++) {
 			if (inputArray[l] == x) {
 				countX = countX + 1;
@@ -214,7 +186,6 @@ public class ArrayOperation {
 				countY = countY + 1;
 			}
 		}
-
 		try {
 			if (countX != countY) {
 				throw new AssertionError("Assertion Error occured");
@@ -222,11 +193,9 @@ public class ArrayOperation {
 		} catch (AssertionError e) {
 			System.out.println(e.getMessage());
 		}
-
 		for (int l = 1; l < inputArray.length; l++) {
 			try {
 				if (inputArray[l - 1] == x && inputArray[l] == y) {
-
 					throw new AssertionError("Assertion Error occured");
 				}
 
@@ -234,12 +203,10 @@ public class ArrayOperation {
 				System.out.println(e.getMessage());
 			}
 		}
-
 		try {
 			if (inputArray[inputArray.length - 1] == x) {
 				throw new AssertionError("Assertion Error occured");
 			}
-
 		} catch (AssertionError e) {
 			System.out.println(e.getMessage());
 		}
@@ -255,7 +222,6 @@ public class ArrayOperation {
 			}
 
 		}
-
 		int i1 = 0;
 		for (i1 = 0; i1 < inputArray.length; i1++) {
 			if (inputArray[i1] == x) {
@@ -268,7 +234,6 @@ public class ArrayOperation {
 							ArrayOfY[k] = -1;
 							break;
 						}
-
 					}
 				}
 			}
