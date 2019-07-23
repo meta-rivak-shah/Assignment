@@ -141,15 +141,16 @@ public final class Polynomial {
 	 * @param polynomial1 is class type of object 
 	 * @return array type coffecient
 	 */
-	public int[] multiPoly(Polynomial polynomial, Polynomial polynomial1) {
-		int allDegree[] = getDgree(polynomial , polynomial1); //return the array type degree
-		int allCoffeicent[] = getCoffcient(polynomial , polynomial1); //return the coffecient type array
+	public String multiPoly(Polynomial polynomial, Polynomial polynomial1) {
+		int allDegree[] = getDgree(polynomial , polynomial1);
+		int allCoffeicent[] = getCoffcient(polynomial , polynomial1);
 		int maxDegre = this.findMaxValue(allDegree);
-		int count =0; // increase until total degree is not equal
-		int value=0; // contain the value of array
-		int flag=0; //used to stop to add same value
-		int newMultiPlyCoffecient[] = new int[maxDegre];
-		int newMultiPlyDegree[] = new int[maxDegre];
+		int count =0;
+		int value=0;
+		int flag=0;
+		int index = allDegree.length;
+		int newMultiPlyCoffecient[] = new int[maxDegre+1];
+		int newMultiPlyDegree[] = new int[maxDegre+1];
 		for (int i = 0; i < allDegree.length; i++) {
 			flag= 0;
 			int evaluteSum=0;
@@ -157,8 +158,7 @@ public final class Polynomial {
 			while(linearSearch != -1) {
 				value = allDegree[i];
 				linearSearch = this.linearSearchAlgo(allDegree, value,linearSearch-1);
-				//this do linear search of same value for multipy of same degree
-				if (linearSearch != -1) { // if value is -1 it stop the loop
+				if (linearSearch != -1) {
 					if(allCoffeicent[linearSearch]!= -1){
 						evaluteSum = evaluteSum + allCoffeicent[linearSearch];
 						allCoffeicent[linearSearch] =-1;
@@ -167,16 +167,20 @@ public final class Polynomial {
 					}
 				}
 			}
-			if(flag != -1){ // if flag is not equal to -1 then it will add value else leave the value
+			if(flag != -1){
 				newMultiPlyCoffecient[count] =evaluteSum;
 				newMultiPlyDegree[count] =value;
 				count = count +1;
 			}
 		}
+		String size="";
 		for (int i = 0; i < newMultiPlyCoffecient.length; i++) {
-			System.out.println(newMultiPlyCoffecient[i]+"m"+newMultiPlyDegree[i]);
+			if(newMultiPlyCoffecient[i] != 0){
+				size = size + String.valueOf(newMultiPlyCoffecient[i]) + "x^" + String.valueOf(newMultiPlyDegree[i]) + " ";
+			}
 		}
-		return newMultiPlyDegree;
+		
+		return size;
 		
 	}
 	/**
