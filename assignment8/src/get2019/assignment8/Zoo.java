@@ -26,7 +26,7 @@ public class Zoo {
 		Scanner sc = new Scanner(System.in);
 
 		while (exit != -1) {
-			System.out.println("1-Ädd Zone");
+			System.out.println("1-Ã„dd Zone");
 
 			System.out.println("2-Add Cage");
 
@@ -195,10 +195,9 @@ public class Zoo {
 	 * @param Acapacity
 	 * @return  return the object of cage type
 	 */
-	public static Cage addCage(String CageType, int Acapacity) {
+	public static Zone addZone(String zoneType, int Cagecapacity) {
 
-		return new Cage(CageType, Acapacity);
-
+		return new Zone(zoneType, Cagecapacity, true, false);
 	}
 	
 	/**
