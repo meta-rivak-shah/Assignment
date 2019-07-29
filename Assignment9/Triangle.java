@@ -38,6 +38,7 @@ public class Triangle implements Shape {
 	 */
 	public int getArea() {
 		int sum = getPerimeter();
+		sum = sum/2;
 		int calc = sum * (sum - side1) * (sum - side2) * (sum - side3);
 		int area = (int) Math.pow(calc, 0.5);
 		return area;
