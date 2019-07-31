@@ -98,7 +98,6 @@ public class LinkedList {
 		Node prev = null;
 		Node curr = null;
 		Node Last = null;
-		Node New1 = new Node();
 		while (roation.next != null) {
 
 			if (count == L) { //take the address of first Left index node
@@ -109,15 +108,6 @@ public class LinkedList {
 				Last = roation.next; // contain the right +1 index address
 				prev = roation; //contain right node address
 			}
-
-			if (count != L && count < L) {
-				Node temp = New1;  // also create a temp list which element leave before left node address
-				while (temp.next != null) {
-					temp = temp.next;
-				}
-				temp.next = this.insert(roation.data); 
-			}
-
 			roation = roation.next;
 			count = count + 1;
 		}
@@ -136,15 +126,8 @@ public class LinkedList {
 			prev = next;  //now again make previous to next one
 			next = curr.next; //update next node to current next address
 		}
-
-		Node new2 = New1;
-		while (new2.next != null) {
-			new2 = new2.next;
-		}
-		new2.next = curr;
-		New1 = New1.next;
-		System.out.println();
-		this.printList(New1);
+		this.printList(n1);
+		Node New1 = n1;
 		int index = 0;
 		while (New1 != null) {
 			output[index] = New1.data;
@@ -153,7 +136,6 @@ public class LinkedList {
 		}
 		return output;
 	}
-
 	/**
 	 * 
 	 * @param n1 contain the list of all element
