@@ -31,7 +31,7 @@ public class CollegeCounsellingTest {
 		int row;
 		try {
 			String[] prefrences = new String[5];
-			Workbook workbook = Workbook.getWorkbook(new java.io.File("AllocationList.xls"));
+			Workbook workbook = Workbook.getWorkbook(new java.io.File("Allocation.xls"));
 			Sheet sheet = workbook.getSheet(0);
 			String studentName;
 			String allocatedCourse ;
