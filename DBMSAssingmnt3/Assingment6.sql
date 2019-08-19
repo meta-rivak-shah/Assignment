@@ -105,3 +105,36 @@ WHERE
         ITEM_ORDER I
             LEFT JOIN
         ORDERS O ON O.ORDER_ID = I.ORDER_ID AND DATEDIFF(now(), O.orderDate) < 90);
+        
+/* Display top 10 Items which were cancelled most.  */
+SELECT p.id, p.Name, count(p.id) AS No_Of_Cancellations 
+FROM product p
+LEFT JOIN item_order i ON p.id = i.product_id
+WHERE status = "C"
+GROUP BY p.id
+ORDER BY No_Of_Cancellations DESC limit 10;
+
+
+/* Display top 20 Products which are ordered most in last 60 days along with numbers*/
+SELECT 
+    p.Name, SUM(i.quanity) AS No_Of_Units_Ordered , Sum(i.TotalAmount) As Total_Sum 
+FROM
+   product p
+       LEFT JOIN
+   item_order i ON p.id = i.product_id
+       LEFT JOIN
+   orders o ON i.order_id = o.order_id
+WHERE
+   DATEDIFF(Now(),
+       o.orderdate) < 60
+GROUP BY p.id
+ORDER BY Total_Sum DESC
+LIMIT 20;
+
+/*Display Monthly sales revenue of the StoreFront for last 6 months. It should display each month’s sale.
+*/
+SELECT  SUM(oi.quanity) AS No_Of_Units_Ordered ,SUM(oi.totalAmount) AS MAX_REVENUE,MONTH(o.orderdate) AS Month
+FROM
+  product p,item_order oi , orders o
+WHERE  DATEDIFF(Now(), o.orderdate) < 180 AND oi.order_id = o.order_id And p.id = oi.product_id 
+GROUP BY MONTH(o.orderdate) 
