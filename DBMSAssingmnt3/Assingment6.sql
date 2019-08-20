@@ -133,8 +133,13 @@ LIMIT 20;
 
 /*Display Monthly sales revenue of the StoreFront for last 6 months. It should display each month’s sale.
 */
-SELECT  SUM(oi.quanity) AS No_Of_Units_Ordered ,SUM(oi.totalAmount) AS MAX_REVENUE,MONTH(o.orderdate) AS Month
+SELECT 
+    SUM(i.quanity) As Total_quantity,
+    SUM(i.TotalAmount) As Total_Amount,
+    MONTH(O.orderDate) AS MONTH
 FROM
-  product p,item_order oi , orders o
-WHERE  DATEDIFF(Now(), o.orderdate) < 180 AND oi.order_id = o.order_id And p.id = oi.product_id 
-GROUP BY MONTH(o.orderdate) 
+    item_order i
+        left join
+    orders o ON i.order_Id = o.order_Id AND DATEDIFF(Now(), o.orderdate) < 180
+GROUP BY MONTH
+ORDER BY MONTH;
