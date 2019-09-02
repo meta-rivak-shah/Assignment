@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meta-parking</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Meta-Parking-System</h1>
+	</div>
+	<!--User Rgister Start-->
+	<div id = "Register-div"> 
+		<form autocomplete="off" id="from" onsubmit="return false">
+			<table align="center"  cellspacing="50">
+
+			<tr>
+				<th><spam id="invalidN">Name</spam></th>
+				<td> <input id="name" type="text" name="name" placeholder="Enter your name">
+				 &nbsp<span id="requiredName" style="color: red"></span> 
+				</td>
+			</tr>
+
+			<tr>
+				<th><spam id="invalidE">Email</spam></th>
+				<td><input id="Email" type="Email" name="Email" placeholder="Enter your Email">
+				&nbsp<span id="requiredEmail" style="color: red"></span>
+				</td>
+			</tr>
+
+			<tr>
+				<th>
+					<spam id="invalidP">Password</spam>
+				</th>
+				<td>
+					<input id="Password" type="Password" name="Password" placeholder="Enter your Password">
+					&nbsp<span id="requiredPassword" style="color: red"></span>
+				</td>
+			</tr>
+
+			<tr>
+				<th>
+					<spam id="invalidCp">Confirm Password</spam>
+				</th>
+				<td>
+					<input id="Password-c" type="Password-c" name="Password-c" placeholder="Enter your Password again">
+					&nbsp<span id="requiredPassword1" style="color: red"></span>
+				</td>
+			</tr>
+
+			<tr>
+				<th>
+					<spam id="invalidG">Gender</spam>
+				</th>
+
+				<td>
+					<span>
+						<!-- <input id="Gender" value="none" type="radio"   name="Gender">&nbsp Male &nbsp -->
+						 <input id="GenderM"  type="radio"  name="Gender">&nbsp Male &nbsp
+						 <input id="GenderF"  type="radio"  name="Gender">&nbsp Female &nbsp
+						 <input id="GenderO"  type="radio"  name="Gender">&nbsp Other &nbsp
+						 &nbsp<span id="requiredGender" style="color: red"></span>
+					</span>
+				</td>
+
+			</tr>
+
+			<tr>
+				<th><spam id="invalidC">Contact</spam></th>
+				<td>
+					<input id="Number" type="text" name="Contact" placeholder="Enter your Mobile Number">
+					&nbsp<span id="requiredNumber" style="color: red"></span>
+				</td>
+			</tr>
+
+			<tr>
+				<th>
+					<button onclick="userRegistration()" id="submit" type="submit">Register</button>
+				</th>
+				<th>
+					<button id="Reset" type="Reset">Reset</button>
+				</th>
+			</tr>
+
+		</table>
+		</form>
+	</div>
+	<h2 align="center" style="display: none;" id="user-id"></h2>
+	<!--User Rgister End-->
+	<!--vehicle Rgister Start-->
+	<div id = "vehicle-Register-div" style="display: none;"> 
+		<form autocomplete="off" id="from" onsubmit="return false">
+			<table align="center"  cellspacing="50">
+
+			<tr>
+				<th><spam id="invalidVname">Name</spam></th>
+				<td> <input id="Vname" type="text" name="name" placeholder="Enter your Vehicle name">
+				 &nbsp<span id="requiredVname" style="color: red"></span> 
+				</td>
+			</tr>
+
+			<tr>
+				<th><spam id="invalidType">Type</spam></th>
+				<td>
+					<select id="Type" name="Type">
+						<option value="none" disabled selected>Select Type of Vehicle</option>
+						<option value="Cycle">Cycle</option>
+						<option value="MotorCycle">Motor Cycle</option>
+						<option value="FourWheelers">Four Wheelers</option>
+					</select>&nbsp
+					<span id="requiredType" style="color: red"></span>
+				</td>
+			</tr>
+
+			<tr>
+				<th>
+					<spam id="invalidVN">Vehicle Number</spam>
+				</th>
+				<td>
+					<input id="VehicleNum" type="text" name="VehicleNum" placeholder="Enter your Vehicle Number ">
+					&nbsp<span id="requiredvehicleNumber" style="color: red"></span>
+				</td>
+			</tr>
+
+			<tr>
+				<th>
+					<spam id="invalidEid">Employee Id</spam>
+				</th>
+				<td>
+					<input id="Employeeid" type="Employeeid" name="Employeeid" readonly>
+					&nbsp<span id="requiredEid" style="color: red"></span>
+				</td>
+			</tr>
+
+
+			<tr>
+				<th><spam id="invalidIdentity">Identification</spam></th>
+				<td>
+					<textarea id="identity" name="identity" cols="50" rows="5"></textarea>
+					&nbsp<span id="requiredIdentity" style="color: red"></span>
+				</td>
+			</tr>
+
+			<tr>
+				<th>
+					<button onclick="vehicleRegister()" id="submit" type="submit">Register</button>
+				</th>
+			</tr>
+
+		</table>
+		</form>
+	</div>
+	<!--vehicle Rgister End-->
+	<!-- Daily montly yearly pass price START-->
+
+	<div id = "vehicle-Price-div" style="display: block;"> 
+		<form autocomplete="off" id="from" onsubmit="return false">
+			<table align="center"  cellspacing="10" cellpadding="20">
+				<tr id="ac" style="display: none;">
+					<th><h3>Type</h3></th>
+					<th><h3>Daily</h3></th>
+					<th><h3>Mothly</h3></th>
+					<th><h3>Yearly</h3></th>
+				</tr>
+
+				<tr id="Cycle"  style="display: none;">
+					<th><h4>Cycle</h4></th>
+					<td><input class = "p"  value="5" type="radio" name="price"><span class="sign">USD</span><p class = "money" >5</p></td>
+					<td><input class = "p"   value="100" type="radio" name="price"><span class="sign">USD</span><p class = "money" >100</p></td>
+					<td><input  class = "p" value="500" type="radio" name="price"><span class="sign">USD</span><p class = "money" >500</p></td>
+				</tr>	
+
+				<tr id="MotorCycle"  style="display: none;">
+					<th><h4>Motor Cycle</h4></th>
+					<td><input class = "p" value="100" type="radio" name="price"><span class="sign">USD</span><p class = "money" >100</p></td>
+					<td><input class = "p"  value="200" type="radio" name="price"><span class="sign">USD</span><p class = "money" >200</p></td>
+					<td><input  class = "p" value="1000" type="radio" name="price"><span class="sign">USD</span><p class = "money" >1000</p></td>
+				</tr>
+
+				<tr id="FourWheelers"  class = "p" style="display: none;">
+					<th><h4>Four Wheelers</h4></th>
+					<td><input class = "p" value="20" type="radio" name="price"><span class="sign">USD</span><p class = "money" >20</p></td>
+					<td><input class = "p"  value="500" type="radio" name="price"><span class="sign">USD</span><p class = "money" >500</p></td>
+					<td><input  class = "p" value="3500" type="radio" name="price"><span class="sign">USD</span><p class = "money" >3500</p></td>
+				</tr>
+
+				<tr id="button" style="display: none;">
+					<th><button onclick="takeGetPass()" type="submit">Gate Pass</button></th>
+					<th>
+						<select id="price" onchange="changeCurrency()">
+							<option disabled selected>Change Currency</option>
+							<option value="USD">USD</option>
+							<option value="YEN">YEN</option>
+							<option value="INR">INR</option>
+						</select>
+					</th>
+					<th id = "error"></th>
+				</tr>
+
+			</table>
+		</form>
+	</div>
+	<!-- Daily montly yearly pass price END-->
+
+
+	<!--Show Ttal Amount start-->
+	<center><h2 id="totalAmount"></h2></center>
+	<!--Show Ttal Amount End -->
+
+
+	<script src="Validation.js"></script>
+</body>
+</html>
