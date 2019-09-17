@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webflow-project-description>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.6.0.201407080615-RELEASE]]></pluginVersion>
+	<configs>
+		<config>
+			<file>src/main/resources/static/image.xml</file>
+			<name><![CDATA[image]]></name>
+		</config>
+	</configs>
+</webflow-project-description>
