@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  datasource: 
+    url: jdbc:mysql://localhost:3306/SpringSecurityAssignment
+    username: root
+    password: rivak
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+
