@@ -1,0 +1,224 @@
+<html>
+    <head>
+        <title>Metacube Parking System</title>
+        <link rel = "stylesheet" type="text/css" href = "MetaParkStyle.css">
+        <script>
+            var col1 = document.getElementsByClassName("collapse");
+            col1.addEventListener()
+            </script>
+    </head>
+    <body>
+        <nav class = "navbar">
+            <ul>
+                <li><a href = "#Employee-div" class = "link">AddEmployee</a></li>
+                <li> <a href = "#Registration-div" class = "link">AddVehicle</a></li>
+                <li><a href = "#FeedbackForm" class = "link">Feedback</a></li>
+                <li><a href = "#Pricing" class = "link">Pricing</a></li>
+            </ul>
+        </nav>
+
+        <img src = "parking.jpg" width = "100%"/>
+
+        <!--Employee Register form-->
+        <details  id = "Employee-div" class  = "collapse">
+            <summary class = "collapse-btn">ADD EMPLOYEE</summary>
+         <div id = "Employee">
+                <h1 align="center">Employee Register Form</h1>
+                <form autocomplete="on"  id="from">
+                    <table align="center"  cellspacing="50">
+        
+                    <tr>
+                        <th> </label for="name">Name</label> </th>
+                        <td> <input id="name" type="text" name="name" placeholder="Enter your name" pattern="^[A-za-z ]+" required>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th> </label for="email">Email</label> </th>
+                        <td><input id="email" type="Email" name="Email" placeholder="Enter your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th>
+                            </label for="password">Password</label>
+                        </th>
+                        <td>
+                            <input id="password" type="Password" name="Password" placeholder="Enter your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th>
+                            </label for="confirmpassword">Confrim Password</label>
+                        </th>
+                        <td>
+                            <input id="confirmpassword" type="Password" name="confirmpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your Password again">
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th>
+                            </label for="Gender">Confrim Password</label>
+                        </th>
+        
+                        <td>
+                                 <input id="GenderM"  type="radio"  name="Gender">&nbsp Male &nbsp
+                                 <input id="GenderF"  type="radio"  name="Gender">&nbsp Female &nbsp
+                                 <input id="GenderO"  type="radio"  name="Gender">&nbsp Other &nbsp
+                        </td>
+        
+                    </tr>
+        
+                    <tr>
+                        <th>  </label for="contactNumber">Contact Number</label></th>
+                        <td>
+                            <input id="contactNumber" type="text" name="Contact" placeholder="Enter your Mobile Number" pattern="^[0-9]+" maxlength="10" minlength="10">
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th>
+                            <input type="submit" value="Register">
+                        </th>
+    
+                        <th>
+                            <input type="reset" value="Reset">
+                        </th>
+    
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </details>
+        <!--Vehicle Registration form -->
+    <details id = "Registration-div" class  = "collapse">
+        <summary class = "collapse-btn">ADD VEHICLE </summary>
+        <div id = "AddVehicle">
+            <h1 align="center">Vechile Register Form</h1>
+            <form autocomplete="off" id="from">
+                <table align="center"  cellspacing="50">
+        
+                    <tr>
+                        <th><label for="Vhiclename">Vhicle Name</label></th>
+                        <td> <input id="Vhiclename" type="text" name="name" pattern="^[A-za-z0-9 ]+" placeholder="Enter your Vehicle name" required>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th><label for="Type">Vhicle Type</label></th>
+                        <td>
+                            <select id="Type" name="Type" required>
+                                <option value="none" disabled selected>Select Type of Vehicle</option>
+                                <option value="Cycle">Cycle</option>
+                                <option value="MotorCycle">Motor Cycle</option>
+                                <option value="FourWheelers">Four Wheelers</option>
+                            </select>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th> <label for="VehicleNum">Vhicle Number</label> </th>
+                        <td>
+                            <input id="VehicleNum" type="text" name="VehicleNum" placeholder="Enter your Vehicle Number" pattern="^[A-Za-z]{2}[0-9]{6}$" required>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th><label for="Employeeid">Employee id</label></th>
+                        <td>
+                            <input id="Employeeid" type="Employeeid" name="Employeeid" readonly value="2" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="identity">identity</label></th>
+                        <td>
+                            <textarea id="identity" name="identity" cols="30" rows="5" required></textarea>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th>
+                            <input type="submit" value="Register">
+                        </th>
+                        <th>
+                            <input type="reset" value="Reset">
+                        </th>
+                    </tr> 
+        
+                </table>
+            </form>
+        </div>
+    </details>
+
+        <!--Feedback form-->
+        <div id = "FeedbackForm">
+            <div  class = "img-field"><center><img src = "contact.jpg" width = "70%" /></center></div>
+            <div class = "Feedback">
+                    <h1 align="center">Get In Touch</h1>
+                    <form autocomplete="off" id="from">
+                        <table align="center"  cellspacing="20">
+                            <tr>
+                                <th> <label for="name">Name</label> </th>
+                                <td> <input id="name" type="text" name="name" placeholder="Enter your name"  pattern="^[A-Za-z ]$"  required></td>
+                            </tr>
+                
+                            <tr>
+                                <th> <label for="email">Email</label> </th>
+                                <td><input id="email" type="Email" name="Email" placeholder="Enter your Email" required></td>
+                            </tr>
+            
+                            <tr>
+                                <th> <label for="Subject">Subject</label> </th>
+                                <td><input id="Subject" type="text" name="Subject" placeholder="Enter your Subject" required></td>
+                            <tr>     
+                            <tr>
+                                <th> <label for="Message">Message</label> </th>
+                                <td> <textarea id="Message" name="Message" cols="30" rows="5"></textarea></td>
+                            <tr>       
+            
+                            <th>
+                                <input type="submit" value="Register">
+                            </th>
+            
+                            <th>
+                                <input type="reset" value="Reset">
+                            </th>
+            
+                            </tr>
+                        </table>
+                    </form>
+            </div>
+        </div>
+
+        <!--Pricing -->
+        <div align = "center" id  = "Pricing">
+            <div class = "pricing-container">
+                <h2>Cycle</h2>
+                <h3 class = "circle-container"><strong>$100<br>/month</strong></h3>
+                <p class = "prices">$5 Daily<br>
+                    $100 Monthly<br>
+                    $500 Yearly<br></p>
+                <button type="button" value = "Purchase Now" class = "button-field">Purchase Now</button>
+            </div>
+           
+            <div class = "pricing-container">
+                <h2>MotorCycle</h2>
+                <h3 class = "circle-container"><strong >$200<br>/month</strong></h3>
+                <p class = "prices">$10 Daily<br>
+                $200 Monthly<br>
+                $1000 Yearly<br></p>
+                <button type="button" value = "Purchase Now" class = "button-field">Purchase Now</button>
+            </div>
+            
+            <div class = "pricing-container">
+                <h2>Car</h2>
+                <h3 class = "circle-container"><strong>$500<br>/month</strong></h3>
+                <p class = "prices">$20 Daily<br>
+                $500 Monthly<br>
+                $3500 Yearly<br></p>
+                <button type="button" value = "Purchase Now" class = "button-field">Purchase Now</button>
+            </div>
+        </div>
+    </body>
+</html>
