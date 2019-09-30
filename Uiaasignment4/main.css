@@ -1,0 +1,453 @@
+body{
+    background-image: url("images/bodybg.png");
+    background-size: auto;
+    margin: 0px;
+    background-attachment: fixed;
+}
+
+#navbar-body {
+    background-color: #648CFF;
+    height: 70px;
+    padding: 10px;
+    width:auto;
+}
+#navbar-body .logo {
+
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    height: 30px;
+    margin-top:10px;
+    margin-left: 40px;
+}
+
+#navbar-body .navbar-item {
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    height: 30px;
+    margin-left: 550px;
+    margin-top:-50px;
+}
+#navbar-body .navbar-item ul li {
+    display: inline;
+    margin-left: 28px;
+    color: white;
+    line-height: 30px;
+}
+#navbar-body .navbar-item ul{
+    padding-left: 10px;
+    margin-top: auto;
+    justify-content: center;
+    margin-left: -66px;
+
+}
+#navbar-body .navbar-icon {
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    height: 30px;
+    margin-left: 1050px;
+    margin-top:-50px;
+}
+#navbar-body .navbar-icon ul li {
+    justify-items: center;
+    display: inline-block;
+    text-align: center;
+    margin-left: 25px;
+    color:white;
+}
+#navbar-body .navbar-icon ul {
+    margin-top: 4px;
+    margin-left: -20px
+}
+#bodybg-container {
+    background-image: url("images/homebg.png");
+    height: 850px;
+    border: 2px solid #648CFF;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background-size: cover;
+}
+#bodybg-container .description-containers {
+    height: 500px;
+    width: 41%;
+    margin-left: 50px;
+    margin-top: 60px;
+}
+#bodybg-container .mobile-containers {
+    height: 635px;
+    width: 41%;
+    margin-left: 45%;
+    background-repeat: no-repeat;
+    margin-top: -505px;
+}
+
+#bodybg-container .description-containers h1 {
+    height: 78px;
+    width: 54%;
+    letter-spacing: 5px;
+  
+    justify-content: center;
+    text-align: center;
+    margin-left: 60px;
+    margin-top: 60px;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+}
+#bodybg-container .description-containers ul {
+    margin-left: 57px;
+}
+#bodybg-container .description-containers ul li {
+display: inline-block;
+height: 35px;
+color: #fff;
+padding-left: 10px;
+padding-top: 20px;
+text-align: center;
+width: 30%;
+}
+#bodybg-container .description-containers ul li:nth-child(1){
+    background-color: #ff5a4f;
+}
+#bodybg-container .description-containers ul li:nth-child(2){
+    background-color: #4563C5;
+}
+#bodybg-container .mobile-containers{
+    background-image: url(images/phone1.png);
+    background-size: auto;
+    
+}
+#features {
+    padding:10px;
+    width:100%;
+}
+
+#features h2 {
+ width: 400px;
+  margin: 20px auto;
+}
+
+#features p {
+  width: 400px;
+  margin: 10px auto;
+}
+
+
+#feature-item {
+    display: flex;
+    padding:30px;
+}
+#feature-item .feature-item-container{
+    margin:50px;
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+    width:30%;
+}
+
+#feature-item .feature-item-container .feature-item-icon {
+    padding: 10px;
+    width: 30%;  
+    height: 100px;
+    margin-top: 20px;
+    font-size: 80px;
+    color:#FC6A45; 
+}
+
+#feature-item .feature-item-descp{
+    text-align: start;
+    letter-spacing: 2px;
+    text-anchor: start;
+    height: auto;
+    margin-left: 39%;
+    margin-top: -126px;
+}
+
+#slider-container{
+    height: 800px;
+    width: 54%;
+    color:blue;
+    margin-left:350px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url("images/test1.png");
+}
+#slider-container .slider-container-left {
+    font-size: 80px;
+    font-weight: lighter;
+    float: left;
+    margin-top:250px;
+}
+#slider-container .slider-container-right {
+    font-size: 80px;
+    font-weight: lighter;
+    float: right;
+    margin-top:250px;
+}
+
+#ScreenShot{
+    margin: 20px;
+    padding: 50px;
+    display: flex;
+   
+}
+#ScreenShot .ScreenShot-continer {
+    background-size: auto;
+    height: 700px;
+    
+    width: 50%;
+
+    margin-left: 100px;
+    background-position-y: 50%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-image: url("images/screen01.png");
+}
+
+#ScreenShot .clody {
+    font-size: 200px;
+    z-index: -1;
+    color: lightgrey;
+    position: relative;
+    transform: rotate(90deg);
+    display: inline-block;
+    margin-left: 230px;
+    margin-top:240px;
+}
+#ScreenShot .ScreenShot-continer-description {
+    margin-left: -30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    margin-top: 200px;
+    width:30%;
+}
+
+#ScreenShot .ScreenShot-continer-1{
+    background-size: auto;
+    height: 700px;
+    
+    width: 50%;
+
+    margin-left: 60px;
+    background-position-y: 50%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-image: url("images/screen02.png");
+}
+
+#ScreenShot .ScreenShot-continer-description-1 {
+    margin-left: 200px;
+    padding-top: 30px;
+    padding-left: 30px;
+    margin-top: 200px;
+    width:30%;
+}
+
+#ScreenShot .ScreenShot-continer-2{
+    background-size: auto;
+    height: 700px;
+    width: 50%;
+    margin-left: 100px;
+    background-position-y: 50%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-image: url("images/screen03.png");
+}
+
+#ScreenShot .ScreenShot-continer-description-2{
+    margin-left: -30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    margin-top: 200px;
+    width:30%;
+}
+#reviews-container{
+    display: flex;
+    border:2px solid green;
+    width: 100%;
+    padding: 30px;
+}
+#review-section {
+	margin: 100px;
+}
+
+#review-section div {
+	display: flex;
+	margin: 0 50px;
+}
+
+#review-section div div {
+	flex: 1;
+	display: block;
+}
+
+#review-section div div h1 {
+	font-size: 72px;
+}
+
+#review-section div div h2 {
+	margin-top: 45px;
+	margin-left: 10px;
+	font-size: 20px;
+	text-align: left;
+	color: #444;
+}
+
+#review-section div div p {
+	margin-left: 10px;
+	font-size: 16px;
+	text-align: left;
+	color: #444;
+}
+
+.opening-braces {
+	color: #6388FB;
+	float: left;
+	font-size:20px !important;
+}
+
+.closing-braces {
+	color: #6388FB;
+    float: right;
+    margin-top: -20px;
+	font-size:20px !important;
+}
+
+#download-app-section {
+	padding: 0px 200px;
+	display: flex;
+	background: #6388FB;
+}
+
+#download-app-section div h1 {
+	color: #fff;
+	margin-top: 100px;
+	font-size: 30px;
+}
+
+#download-app-section div h2 {
+	margin-top: 10px;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 0.1em;
+	padding-right: 70px;
+}
+
+#download-app-section div {
+	flex: 1;
+}
+
+#download-app-section div img {
+	margin: 100px 0px 0px 5px;
+}
+
+#footer {
+	padding: 20px 250px;
+	background:#3B3C53;
+    display: flex;
+}
+
+#footer ul {
+	flex: 1;
+	text-align: center;
+	padding: 10px, 0;
+}
+
+#footer ul li {
+	display: inline-block;
+}
+
+#footer ul li a {
+	margin-top: 5px;
+	color: #B0B1C3;
+	padding: 10px;
+	display: inline-block;
+	border-bottom: solid 3px #3B3C53;
+}
+
+#footer ul li a:hover {
+	background: #fff;
+	color: #3B3C53;
+	transition: 1s;
+}
+
+#footer .logo {
+	height: 15px;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+#footer div a {
+	margin-top: 5px;
+	color: #B0B1C3;
+	padding: 10px;
+	display: inline-block;
+	border-bottom: solid 3px #3B3C53;
+}
+
+#footer div a i {
+	background: #3B3C53;
+	color: #B0B1C3;
+	padding: 5px;
+	border: none;
+}
+
+#footer div a i:hover {
+	background: #fff;
+	color: #3B3C53;
+	transition: 1s;
+}
+
+#rights {
+	background: #3B3C53;
+	padding: 40px 0;
+	text-align: center;
+    color: #888;
+    margin-top: -20px;
+}
+
+.heading {
+	color: #6388FB;
+	text-align: center;
+	font-size: 40px;
+	animation-name: bounceIn;
+	animation-timing-function:ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+}
+
+.sub-heading {
+	margin: 10px 0 50px 0;
+	color: #888;
+	text-align: center;
+	font-weight:normal;
+    font-size: 18px;
+	animation-name: bounceIn;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+}
+
+#image-animation {
+
+}
+@keyframes bounceIn { 
+	0% {
+		transform: scale(0.1);
+        opacity: 0;
+        transform: rotate(180deg);
+        
+	  }
+	  60% {
+		transform: scale(1.2);
+        opacity: 1;
+        transform: rotate(20deg);
+	  }
+	  100% {
+        transform: scale(1);
+        transform: rotate(360deg);
+	  }
+  }
