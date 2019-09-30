@@ -1,0 +1,120 @@
+nav ul li {
+    display: inline;
+}
+nav ul {
+    margin-top: -5px;
+}
+.pricing-container {
+    box-sizing: border-box;
+    border : 2px solid maroon;
+    border-radius: 5%;
+    float: left;
+    width: 26%;
+    margin-top: -20px;
+    margin-left: 90px;
+}
+.circle-container {
+    border: 1px solid black;
+    border-radius: 50%;
+    width : 70px;
+    height : 70px;
+    padding: 5px;
+    text-align: center;
+}
+
+.prices {
+    color: gray;
+}
+
+
+.input-field {
+    background-color:#fff;
+    border-radius: 2%;
+    height: 40px;
+    width : 170%;
+
+}
+
+#AddVehicle {
+    padding :30px 50px;
+    border : 4px solid maroon;
+    background: linear-gradient(#f9faf0 , #fafaf7);
+    border-radius: 2%;
+    margin: 100px;
+}
+
+
+.button-field {
+    border-radius: 2%;
+    background-color:maroon;
+    color:wheat;    
+    height : 40px;
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#FeedbackForm{
+    padding :30px 50px;
+    border : 4px solid maroon;
+    margin: 100px;
+    border-radius: 2%;
+    height: 400px;
+    background: linear-gradient(#f9faf0 , #fafaf7);
+}
+
+#Employee{
+    padding :30px 50px;
+    border : 4px solid maroon;
+    border-radius: 3%;
+    margin: 100px;
+    background: linear-gradient(#f9faf0 , #fafaf7);
+}
+
+.navbar {
+    background-color: maroon;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    margin-top: -10px;
+}
+
+.link {
+    color: wheat;
+    padding: 20px;
+    padding-bottom: 0px;
+    font-size: 150%;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    float: right;
+    margin-bottom: 0px;
+}
+#FeedbackForm .Feedback {
+    height: 318px;
+    width:50%;
+    float: right;
+    margin-top:-323px; 
+} 
+#FeedbackForm .img-field {
+    margin-left: 54px;
+    height: 318px;
+    width:30%;
+    margin-top: 20px;
+    border-radius: 50%;
+    border: 2px dashed black;
+    padding-top:70px; 
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.collapse .collapse-btn {
+    background-color: #b3b3b3;
+    width: 100%;
+    color: #000;
+    margin : 40px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 25px;
+    text-align: right;
+    line-height: 90px;
+    letter-spacing: 15px;
+}
