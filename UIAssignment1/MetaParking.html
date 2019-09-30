@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Meta-Parking</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body align="center">
+    <!-- Image area of vehicle start-->
+        <header>
+            <img src="C:\Users\Rivak\Desktop\vehicle.jpg" alt="Vehicle Image" width="300" height="300"/>
+        <header>
+     <!-- Image area of vehicle End-->
+
+
+    <!-- Navbar Heading Start-->
+    <nav>
+            <a href="#Register-div">Add Employee</a>
+            &nbsp &nbsp &nbsp &nbsp
+            <a href="#vehicle-Register-div"> Add Vehicle </a>
+            &nbsp &nbsp &nbsp &nbsp
+            <a href="#feedback-div"> Give feedback </a>
+            &nbsp &nbsp &nbsp &nbsp
+            <a href="#vehicle-Price-div"> Pricing </a>
+        </nav>
+    <!-- Navbar Heading End-->
+
+    <br><br>
+    <!-- Registration form start-->
+	<div id = "Register-div"> 
+            <h1>Employee Register Form</h1>
+            <form autocomplete="on"  id="from">
+                <table align="center"  cellspacing="50">
+    
+                <tr>
+                    <th> </label for="name">Name</label> </th>
+                    <td> <input id="name" type="text" name="name" placeholder="Enter your name" pattern="^[A-za-z ]+" required>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th> </label for="email">Email</label> </th>
+                    <td><input id="email" type="Email" name="Email" placeholder="Enter your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th>
+                        </label for="password">Password</label>
+                    </th>
+                    <td>
+                        <input id="password" type="Password" name="Password" placeholder="Enter your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th>
+                        </label for="confirmpassword">Confrim Password</label>
+                    </th>
+                    <td>
+                        <input id="confirmpassword" type="Password" name="confirmpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your Password again">
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th>
+                        </label for="Gender">Confrim Password</label>
+                    </th>
+    
+                    <td>
+                             <input id="GenderM"  type="radio"  name="Gender">&nbsp Male &nbsp
+                             <input id="GenderF"  type="radio"  name="Gender">&nbsp Female &nbsp
+                             <input id="GenderO"  type="radio"  name="Gender">&nbsp Other &nbsp
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <th>  </label for="contactNumber">Contact Number</label></th>
+                    <td>
+                        <input id="contactNumber" type="text" name="Contact" placeholder="Enter your Mobile Number" pattern="^[0-9]+" maxlength="10" minlength="10">
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th>
+                        <input type="submit" value="Register">
+                    </th>
+
+                    <th>
+                        <input type="reset" value="Reset">
+                    </th>
+
+                </tr>
+            </table>
+        </form>
+    </div>
+        <h2 align="center" style="display: none;" id="user-id"></h2>
+    <!-- Registration form End-->
+  
+    <!--vehicle Rgister Start-->
+    <br><br><br><br><br><br><br>
+	<div id = "vehicle-Register-div"> 
+            <h1>Vechile Register Form</h1>
+            <form autocomplete="off" id="from">
+                <table align="center"  cellspacing="50">
+    
+                <tr>
+                    <th><label for="Vhiclename">Vhicle Name</label></th>
+                    <td> <input id="Vhiclename" type="text" name="name" pattern="^[A-za-z0-9 ]+" placeholder="Enter your Vehicle name" required>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Type">Vhicle Type</label></th>
+                    <td>
+                        <select id="Type" name="Type" required>
+                            <option value="none" disabled selected>Select Type of Vehicle</option>
+                            <option value="Cycle">Cycle</option>
+                            <option value="MotorCycle">Motor Cycle</option>
+                            <option value="FourWheelers">Four Wheelers</option>
+                        </select>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th> <label for="VehicleNum">Vhicle Number</label> </th>
+                    <td>
+                        <input id="VehicleNum" type="text" name="VehicleNum" placeholder="Enter your Vehicle Number" pattern="^[A-Za-z]{2}[0-9]{6}$" required>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Employeeid">Employee id</label></th>
+                    <td>
+                        <input id="Employeeid" type="Employeeid" name="Employeeid" readonly value="2" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="identity">identity</label></th>
+                    <td>
+                        <textarea id="identity" name="identity" cols="30" rows="5" required></textarea>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th>
+                        <input type="submit" value="Register">
+                    </th>
+                    <th>
+                        <input type="reset" value="Reset">
+                    </th>
+                </tr> 
+    
+            </table>
+            </form>
+        </div>
+    <!--vehicle Rgister End--> 
+    <br><br><br><br><br><br><br><br><br>
+    <!-- feedback form start-->
+    <div id = "feedback-div"> 
+        <h1>Get In Touch</h1>
+        <form autocomplete="off" id="from">
+            <table align="center"  cellspacing="50">
+                <tr>
+                    <th> <label for="name">Name</label> </th>
+                    <td> <input id="name" type="text" name="name" placeholder="Enter your name"  pattern="^[A-Za-z ]$"  required></td>
+                </tr>
+    
+                <tr>
+                    <th> <label for="email">Email</label> </th>
+                    <td><input id="email" type="Email" name="Email" placeholder="Enter your Email" required></td>
+                </tr>
+
+                <tr>
+                    <th> <label for="Subject">Subject</label> </th>
+                    <td><input id="Subject" type="text" name="Subject" placeholder="Enter your Subject" required></td>
+                <tr>     
+                <tr>
+                    <th> <label for="Message">Message</label> </th>
+                    <td> <textarea id="Message" name="Message" cols="30" rows="5"></textarea></td>
+                <tr>       
+
+                <th>
+                    <input type="submit" value="Register">
+                </th>
+
+                <th>
+                    <input type="reset" value="Reset">
+                </th>
+
+                </tr>
+            </table>
+        </form>
+    </div>
+    <!--feedback from end-->
+   <br><br><br>
+    <!-- Daily montly yearly pass price START-->
+	<div id = "vehicle-Price-div"> 
+        <form autocomplete="off" id="from">        
+           <h1>Cycle</h1>
+           <div>
+               <h3>300$</h3>
+               <h4>/Month</h4>
+               <p>5$Daily</p>
+               <p>10$Month</p>
+               <p>100$yearly</p>
+           </div>
+           <button type="submit">Purchase Now</button>
+        </form>
+        <form autocomplete="off" id="from">        
+            <h1>Motor Cycle</h1>
+            <div>
+                <h3>500$</h3>
+                <h4>/Month</h4>
+                <p>50$Daily</p>
+                <p>100$Month</p>
+                <p>1000$yearly</p>
+            </div>
+            <button type="submit">Purchase Now</button>
+        </form>
+        <form autocomplete="off" id="from">        
+            <h1>Four Wheelers</h1>
+            div>
+                <h3>800$</h3>
+                <h4>/Month</h4>
+                <p>60$Daily</p>
+                <p>610$Month</p>
+                <p>6100$yearly</p>
+            </div>
+            <button type="submit">Purchase Now</button>
+        </form>
+    </div>
+    <br><br><br>   <br><br><br> 
+    <!-- Daily montly yearly pass price END-->
+</body>
+</html>
