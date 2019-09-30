@@ -1,0 +1,75 @@
+@CHARSET "ISO-8859-1";
+
+.bg-info{
+	background-color: #bbf6ff!important;
+}
+
+.space {
+	padding:45px 25px;
+}
+.space1 {
+	padding:105px 25px;
+}
+
+.formPart {
+	background-color: #f5f9fa;
+}
+
+.textManage span a {
+	
+	text-decoration: none;
+	font-size:20px;
+	font-style: oblique;
+
+}
+
+#navbar{
+	position: sticky;
+}
+
+.error{
+	color: red;
+}
+
+#card {
+	position:relative;
+	margin-top:20px;
+	box-sizing:border-box;
+}
+#card .profileCARD {
+	box-sizing: border-box;
+	background-color:#ffffff;
+	border:2px solid black;
+	padding: 20px;
+	margin: 20px;
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.9);
+
+}
+
+.profileCARD  .userdetails .name {
+	padding: 10px;
+}
+
+
+.profileCARD  .userdetails .img {
+	padding: 40px;
+	border:1px dashed black;
+	border-radius:50%;
+	height:150px;
+}
+
+
+#card .details{
+	background-image: linear-gradient(#faf9f2, #e3eeff);
+}
+#card .details .card{
+	border-radius:5%;
+}
+
+.passDesign{
+	border:2px solid black;
+	height:100px;
+	background-color:lightgrey;
+	padding: 20px;
+	margin: 20px;
+}
