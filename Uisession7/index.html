@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Mansalva">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body id = "b">
+  
+<div class="jumbotron container mt-4 bg-primary text-white">
+    <div class="container">
+      <h1>Welcome To Meta-Parking Registration</h1>      
+      <p>Enter your Following Details for Registration</p>
+    </div>
+    <div class="progress">
+        <div class="progress-bar bg-success" id="progress" style="width:0%"></div>
+    </div>
+  </div>
+<div class="container" id="container">
+    <h2>Registration</h2>
+    <div class="card">
+      <div id="register-block" class="card-header card bg-success text-white">User Registration Form</div>
+      <div class="card-body">
+            <label id="label-filled" class="text-info">Hey user, Tell me your Name</label>
+      </div>
+
+        <div class="card-footer p-4" id="foot1">
+            <div class="input-group mb-3 p-4">
+                <input type="text" id="input-filled" class="form-control border border-success" placeholder="Enter here ....." onblur="validateData();">
+              
+            </div>
+        </div>
+         <div class="card-footer p-4 text-center justify-content-between" id="foot2" style="display: none;">
+               <button  value="male" onclick="validateData();" id="male" class=" btn btn-primary text-white p-4"> <i class="fa fa-male" aria-hidden="true"></i></button>
+
+               <button value="female" onclick="validateData();" id="female" class="gender btn btn-primary text-white p-4"> <i class="fa fa-female" aria-hidden="true"></i></button>
+        </div>
+        <div class="card-footer p-4 text-center justify-content-between" id="foot3" style="display: none;">
+            <button  value="Cycle" onclick="validateData();" id="cycle" class=" btn btn-primary text-white p-4"> <i class="fa fa-bicycle"></i></button>
+
+            <button value="MotorCycle " onclick="validateData();" id="moter" class="gender btn btn-primary text-white p-4"> <i class="fa fa-motorcycle"></i></button>
+
+            <button value="FourWheelers" onclick="validateData();" id="fourWheel" class="gender btn btn-primary text-white p-4"><i class="fa fa-car"></i></button>
+        </div>
+        <div class="card-footer p-4 text-center justify-content-between" id="foot5" style="display: none;">
+            <div class="alert alert-warning alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Warning!</strong> <strong class="text-dark" id="error"></strong>.
+              </div>
+        </div>
+     <div class="card-footer p-4 text-center justify-content-between" id="foot4" style="display: none;">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header card-header-2">
+                        <h2>Daily</h2> 
+                        <h2>Mothly</h2>  
+                        <h2>Yearly</h2> 
+                    </div>
+                    <div class="card-body-2 card-body" style="display: none; " id="Cycle">
+                            <div>
+                                <input class = "p"  value="5" type="radio" name="price"><span class="sign">USD</span><p class = "money" >5</p>
+                            </div>
+                            <div>
+                                <input class = "p"   value="100" type="radio" name="price"><span class="sign">USD</span><p class = "money" >100</p>
+                            </div>
+                            <div>
+                                <input  class = "p" value="500" type="radio" name="price"><span class="sign">USD</span><p class = "money" >500</p>
+                            </div>
+                    </div> 
+
+                    <div class="card-body-2 card-body" style="display: none;" id="MotorCycle">
+                            <div>
+                                    <input class = "p"  value="5" type="radio" name="price"><span class="sign">USD</span><p class = "money" >5</p>
+                            </div>
+                            <div>
+                                <input class = "p"   value="100" type="radio" name="price"><span class="sign">USD</span><p class = "money" >100</p>
+                            </div>
+                            <div>
+                                <input  class = "p" value="500" type="radio" name="price"><span class="sign">USD</span><p class = "money" >500</p>
+                            </div>
+                    </div> 
+
+                    <div class="card-body-2 card-body" style="display: none;"" id="FourWheelers">
+                            <div>
+                                    <input class = "p"  value="5" type="radio" name="price"><span class="sign">USD</span><p class = "money" >5</p>
+                            </div>
+                            <div>
+                                <input class = "p"   value="100" type="radio" name="price"><span class="sign">USD</span><p class = "money" >100</p>
+                            </div>
+                            <div>
+                                <input  class = "p" value="500" type="radio" name="price"><span class="sign">USD</span><p class = "money" >500</p>
+                            </div>
+                    </div> 
+                    <div class="card-footer">
+                            <button onclick="validateData()" type="button">Gate Pass</button>
+                            <select id="price" onchange="changeCurrency()">
+                                    <option disabled selected>Change Currency</option>
+                                    <option value="USD">USD</option>
+                                    <option value="YEN">YEN</option>
+                                    <option value="INR">INR</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<center><h2 id="totalAmount"></h2></center>
+<script src="main.js"></script>
+<script src="https://kit.fontawesome.com/145375d6eb.js" crossorigin="anonymous"></script>
+</body>
+</html>
