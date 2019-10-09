@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script>
+			var Queue = function(){
+				this.items = [];
+			}
+				
+			Queue.prototype.enqueue = function(element) {
+				this.items.push(element);
+			}
+				
+			Queue.prototype.dequeue = function() {
+				if(this.items.size == 0) {
+					return "Underflow";
+				} else {
+					return this.items.shift();
+				}
+			}
+			var queue = new Queue();
+			function enqueue() {
+				var element = document.getElementById("inputValue").value;
+				queue.enqueue(element);
+				alert(element + " is inserted into queue");
+			}
+			
+			function dequeue() {
+				var value = queue.dequeue();
+				alert(value + " is removed from queue");
+			}
+			
+			function showQueue() {
+				alert(queue.items);
+			}
+			
+        </script>
+    </head>
+	    <body>
+		<form style="display:block;text-align:center;margin-top:100px;">
+			<h3>Queue Implementation</h3>
+			<input type="number" id="inputValue" placeholder="enter value to be pushed"/>
+			
+			<input type="button" value="enqueue" onclick="enqueue()" style="margin-left:10px;">
+			<input type="button" value="dequeue" onclick="dequeue()" style="margin-left:10px;">
+			<input type="button" value="Show Queue" onclick="showQueue()" style="margin-left:10px;">
+		</form>
+	
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script>
+			var Stack = function(){
+					this.items = [];
+				}
+				
+			Stack.prototype.push = function(element) {
+				this.items.push(element);
+			}
+				
+			Stack.prototype.pop = function() {
+				if(this.items.size == 0) {
+					return "Underflow";
+				} else {
+					return this.items.pop();
+				}
+			}
+			
+			var stack = new Stack();
+			function push() {
+				var element = document.getElementById("inputValue").value;
+				stack.push(element);
+				alert(element + " is pushed into stack");
+			}
+			
+			function pop() {
+				var value = stack.pop();
+				alert(value + " is popped from stacked");
+			}
+			
+			function showStack() {
+				alert(stack.items);
+			}
+			
+        </script>
+    </head>
+	    <body>
+		<form style="display:block;text-align:center;margin-top:100px;">
+			<h3>Stack Implementation</h3>
+			<input type="number" id="inputValue" placeholder="enter value to be pushed"/>
+			
+			<input type="button" value="push" onclick="push()" style="margin-left:10px;">
+			<input type="button" value="pop" onclick="pop()" style="margin-left:10px;">
+			<input type="button" value="Show Stack" onclick="showStack()" style="margin-left:10px;">
+		</form>
+	
+    </body>
+</html>
