@@ -1,0 +1,22 @@
+<div class="row justify-content-around">
+    <div class=" col-xl-4 col-lg-4 col-sm-10"  *ngFor="let product of productList " id = "itemBlock">
+        <div *ngIf="Category == product.categoryName">
+        <div class="productImage">
+            <img class="img-responsive" src="assets/images/{{product.imagePath}}">
+        </div>
+        
+        <div><p>{{product.name}}</p></div>
+        <div class="price"><p>${{product.price}}</p></div>
+        <button class="btn btn-secondary addButton" (click)="addToCart(product.id)">Add To Cart</button>
+    </div>
+    <div *ngIf="Category == 'none'">
+            <div class="productImage">
+                <img class="img-responsive" src="assets/images/{{product.imagePath}}">
+            </div>
+            <div><p>{{product.name}}</p></div>
+            <div class="price"><p>${{product.price}}</p></div>
+            <button class="btn btn-secondary addButton" (click)="addToCart(product.id, product.name)">Add To Cart</button>
+        </div>
+</div>
+    
+</div>
