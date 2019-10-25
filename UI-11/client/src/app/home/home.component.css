@@ -1,0 +1,17 @@
+    /* 
+    .row{
+        position: absolute;
+    } */
+
+.categoryList{
+    position: fixed;
+    left:0;
+    /* z-index: 1; */
+    
+    margin-top:3rem;
+}
+
+.productList{
+    position: relative;
+    
+}

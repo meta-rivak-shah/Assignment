@@ -1,0 +1,25 @@
+.categoryList{
+    font-size:0.75rem;
+    float: center;
+}
+
+.categoryList a li{
+    color:black;
+    
+}
+
+.categoryList a {
+    text-decoration: none; 
+    
+}
+
+.categoryList a li:active{
+    background-color:rgb(96, 96, 248);
+    color:white;
+}
+
+.categoryList a li:hover{
+    background-color:rgb(96, 96, 248);
+    color:white;
+    
+}

@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="['']">
+        <i class="fa fa-leaf" aria-hidden="true"></i>
+    </a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/cart/',userId]">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="badge badge-warning" id="cartBadge">{{itemList.length}}</span>
+            </a>
+        </li>
+    </ul>
+    <span>
+        <!-- <button class="btn btn-primary" *ngIf="!isAuthenticated" (click)="login()"> Login </button> -->
+        <ul class="navbar-nav mr-3">      <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              joasd
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" [routerLink]="['/orders']">My Order</a>
+              <a class="dropdown-item" href="#">LogOut</a>
+            </div>
+          </li></ul>
+    </span>
+</nav>

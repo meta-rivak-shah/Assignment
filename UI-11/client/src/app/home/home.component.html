@@ -1,0 +1,11 @@
+
+<div class="row justify-content-around">
+
+    <div class="col-xl-0 col-lg-0 col-md-2 col-sm-4 categoryList">
+        <app-category-list  (valueChange)='displayCounter($event)'></app-category-list>
+    </div>
+    <div class="col-xl-10 col-lg-9 col-md-8 col-sm-8 offset-lg-2 productList">
+
+            <app-product-list [Category]="Category"></app-product-list>
+    </div>
+</div>
