@@ -1,0 +1,64 @@
+<div class="card m-4 border-0">
+
+    <form [formGroup]="taskEditForm">
+
+        <div class="form-row">
+            <div class="form-group col-8">
+                <label>Task Name</label>
+                <input type="text" class="form-control" formControlName="taskName" placeholder="name"
+                [ngClass]="{ 'is-invalid': submitted && fval.taskName.errors }"
+                    #taskName  [(ngModel)]="toEditTask.taskName"/>
+            </div>
+            <div class="invalid-feedback">
+                Task name is required
+             </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-8">
+                <label>Task Description</label>
+                <input type="text" class="form-control" formControlName="taskDescription" placeholder="description"
+                     [(ngModel)]="toEditTask.taskDescription"
+                    [ngClass]="{ 'is-invalid': submitted && fval.taskDescription.errors }" #taskDescription />
+            </div>
+            <div class="invalid-feedback">
+                Task  Description is required
+             </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group col-8">
+                <label>Priority </label>
+                <select formControlName="priority" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && fval.priority.errors }" [(ngModel)]="toEditTask.taskPriority">
+                    
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+            </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+                <div class="form-group col-8">
+                    <label>Status </label>
+                    <select formControlName="status" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && fval.status.errors }" [(ngModel)]="toEditTask.status">
+                        
+                        <option value="New">New</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+
+                </div>
+            </div>
+
+
+        <div class="">
+            <button type="submit" class="btn btn-primary mr-1" (click)="signup()">Update</button>
+            <button class="btn btn-secondary  mr-1" type="reset" (click)="onReset()">Cancel</button>
+            <button class="btn btn-danger  mr-1" type="submit" (click)="deleteTask()">Delete</button>
+        </div>
+    </form>
+</div>

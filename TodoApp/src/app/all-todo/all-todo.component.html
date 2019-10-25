@@ -1,0 +1,63 @@
+<div id="mydiv">
+    <div class="row justify-content-around">
+        <div class="col-xl-2 col-lg-4 col-md-4 scrollbar scrollbar-primary" id="taskLists">
+
+            <div class="card-body">
+                <h6>New</h6>
+                <div>
+                    <div *ngFor="let task of taskList " class="m-3">
+                        <div *ngIf="task.status == 'New'">
+                            <div  id="{{task.taskPriority}}">
+                                <p>{{task.taskName}}</p>
+                                <p class="text-dark text-mutted">{{task.taskDescription}}</p>
+                                <button [routerLink]="['/edit-task/',task.creationDate]" class="ml-1text-white bg-dark btn btn-default">Edit</button>
+                                <button [routerLink]="['/task-details/',task.creationDate]" class="ml-1 text-white bg-dark btn btn-default ">Details</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xl-2 col-lg-4 col-md-4 scrollbar scrollbar-primary" id="taskLists">
+
+            <div class="card-body">
+                <h6>In Progress</h6>
+
+                <div>
+                    <div *ngFor="let task of taskList ">
+                        <div *ngIf="task.status == 'In Progress'">
+                            <div  id="{{task.taskPriority}}">
+                                <p>{{task.taskName}}</p>
+                                <p class="text-dark text-mutted">{{task.taskDescription}}</p>
+                                <button [routerLink]="['/edit-task/',task.creationDate]" class=" text-white bg-dark btn btn-default">Edit</button>
+                                <button [routerLink]="['/task-details/',task.creationDate]" class="text-white bg-dark btn btn-default">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xl-2 col-lg-4 col-md-4 scrollbar scrollbar-primary" id="taskLists">
+
+            <div class="card-body">
+                <h6>Completed</h6>
+                <div>
+                    <div *ngFor="let task of taskList ">
+                        <div *ngIf="task.status == 'Completed'">
+                            <div  id="{{task.taskPriority}}">
+                                <p>{{task.taskName}}</p>
+                                <p class="text-dark text-mutted">{{task.taskDescription}}</p>
+                                <button [routerLink]="['/task-details/',task.creationDate]" class="my-4 text-white bg-dark btn btn-default btn-block">Details</button>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

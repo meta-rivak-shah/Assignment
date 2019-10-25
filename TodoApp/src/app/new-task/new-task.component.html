@@ -1,0 +1,49 @@
+<div class="card m-4 border-0">
+
+    <form [formGroup]="taskForm">
+
+        <div class="form-row">
+            <div class="form-group col-8">
+                <label>Task Name</label>
+                <input type="text" class="form-control" formControlName="taskName" placeholder="name"
+                [ngClass]="{ 'is-invalid': submitted && fval.taskName.errors }" />
+                <div class="invalid-feedback">
+                   Task name is required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-8">
+                <label>Task Description</label>
+                <input type="text" class="form-control" formControlName="taskDescription" placeholder="description"
+                    [ngClass]="{ 'is-invalid': submitted && fval.taskDescription.errors }" #taskName />
+                    <div class="invalid-feedback">
+                        Task name is required
+                     </div>
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group col-8">
+                <label>Priority </label>
+                <select formControlName="priority" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && fval.priority.errors }">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <div class="invalid-feedback">
+                    Task name is required
+                 </div>
+            </div>
+        </div>
+
+
+        <div class="">
+            <button type="submit" class="btn btn-primary mr-1" (click)="signup()">Add</button>
+            <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+        </div>
+    </form>
+</div>

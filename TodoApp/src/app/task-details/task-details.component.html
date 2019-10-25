@@ -1,0 +1,76 @@
+<div *ngIf="tempTask.status == 'New'" id="newTask" class="taskDetail ">
+        <span>
+            <label>Task Name:</label>
+            <p >{{tempTask.taskName}}</p>
+        </span>
+        <span>
+            <label>Task Description:</label>
+            <p>{{tempTask.taskDescription}}</p>
+        </span>
+        <span>
+    
+    
+            <label>Task Priority:</label>
+            <p>{{tempTask.taskPriority}}</p>
+        </span>
+        <span>
+    
+    
+            <label>Task status:</label>
+            <p>{{tempTask.status}}</p>
+        </span>
+        <span>
+            <label>Task Creation Date:</label>
+            <p>{{cd}}</p>
+        </span>
+        <span>
+            <label>Task Completion Date:</label>
+            <p>{{compD}}</p>
+        </span>
+        <button [routerLink]="['/edit-task/',tempTask.creationDate]" class="btn  btn-primary">Edit</button>
+        <button class="btn btn-danger  mr-1" type="submit" (click)="deleteTask()">Delete</button>
+    </div>
+    
+    <div *ngIf="tempTask.status == 'In Progress'" id="inProgressTask" class="taskDetail ">
+        <label>Task Name:</label>
+        <p>{{tempTask.taskName}}</p>
+    
+        <label>Task Description:</label>
+        <p>{{tempTask.taskDescription}}</p>
+    
+        <label>Task Priority:</label>
+        <p>{{tempTask.taskPriority}}</p>
+    
+        <label>Task status:</label>
+        <p>{{tempTask.status}}</p>
+    
+        <label>Task Creation Date:</label>
+        <p>{{cd}}</p>
+    
+        <label>Task Completion Date:</label>
+        <p>{{compD}}</p>
+        <button [routerLink]="['/edit-task/',tempTask.creationDate]" class="btn  btn-primary">Edit</button>
+        <button class="btn btn-danger  mr-1" type="submit" (click)="deleteTask()">Delete</button>
+    </div>
+    
+    <div *ngIf="tempTask.status == 'Completed'" id="completedTask" class="taskDetail ">
+        <label>Task Name:</label>
+        <p >{{tempTask.taskName}}</p>
+    
+        <label>Task Description:</label>
+        <p>{{tempTask.taskDescription}}</p>
+    
+        <label>Task Priority:</label>
+        <p>{{tempTask.taskPriority}}</p>
+    
+        <label>Task status:</label>
+        <p>{{tempTask.status}}</p>
+    
+        <label>Task Creation Date:</label>
+        <p>{{cd}}</p>
+    
+        <label>Task Completion Date:</label>
+        <p>{{compD}}</p>
+        <button [routerLink]="['/edit-task/',tempTask.creationDate]" class="btn  btn-primary">Edit</button>
+        <button class="btn btn-danger  mr-1" type="submit" (click)="deleteTask()">Delete</button>
+    </div>

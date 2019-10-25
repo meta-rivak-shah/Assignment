@@ -1,0 +1,49 @@
+#mydiv {
+    background-color: rgba(240, 248, 255, 0.521);
+}
+h6{
+    text-align: center;
+}
+
+#taskLists{
+    background-color:white;
+    height:600px;
+    margin-top:2rem;
+    margin-bottom:2rem;
+    border-radius: 2%;
+    overflow-y: scroll;
+}
+.scrollbar {
+    margin-left: 30px;
+    float: left;
+    height: 300px;
+    width: 65px;
+    background: #fff;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+    }
+
+    .scrollbar-primary::-webkit-scrollbar {
+        width: 12px;
+        background-color: rgb(245, 245, 245); }
+
+        .scrollbar-primary::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+           
+            background-color: rgb(193, 217, 241); }
+
+#High {
+    background-color: rgba(255, 0, 0, 0.342);
+}
+
+
+
+#Low {
+    background-color: rgba(0, 132, 255, 0.534);
+}
+
+
+
+#Medium {
+    background-color: rgba(255, 217, 0, 0.308);
+}
