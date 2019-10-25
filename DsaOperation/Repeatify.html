@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Remove Repeated String</title>
+		<script>
+			function repeatify() {
+				var stringToRepeat = document.getElementById("string").value;
+				var numberOfTimeToRepeat = document.getElementById("numberOfTimeToRepeat").value;
+				var repeatedString = "";
+				for (i = 0; i < numberOfTimeToRepeat; i++) {
+					repeatedString += stringToRepeat;
+				}
+				alert(repeatedString);
+			}
+		</script>
+	</head>
+	<body>
+		<form style = "display:block; text-align:center; margin-top:100px; ">
+			<h3>Repeat String</h3>
+			<input type="text" id="string" placeholder="enter String to be repeated" required/>
+			<input type="number" id="numberOfTimeToRepeat" placeholder="enter number of types to be repeated"/>
+			<input type="button" value="Repeat" onclick="repeatify()" style="margin-left:10px;">
+		</form>
+		
+	</body>
+</html>
